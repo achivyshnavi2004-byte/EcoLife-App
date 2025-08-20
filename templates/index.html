@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoLife App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 EcoLife App</h1>
+        <p>Estimate your monthly carbon footprint</p>
+        <form method="POST">
+            <label>Monthly Electricity Usage (kWh):</label>
+            <input type="number" name="electricity" step="0.1" required><br>
+
+            <label>Monthly Travel by Car (km):</label>
+            <input type="number" name="travel" step="0.1" required><br>
+
+            <label>Number of Meat Meals per Month:</label>
+            <input type="number" name="meat" required><br>
+
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                <h2>Result:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
