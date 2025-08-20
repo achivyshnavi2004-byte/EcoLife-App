@@ -1,34 +1,41 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f5e9;
+    background-image: url('https://www.transparenttextures.com/patterns/leaf.png'); 
+    background-repeat: repeat;
+    background-size: auto;
 }
-
-.container {
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #e0f7fa;
-    border-radius: 10px;
+header {
+    background: linear-gradient(90deg, #43a047, #66bb6a);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-
-input {
-    margin: 5px 0;
-    padding: 5px;
-    width: 80%;
+.card {
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 20px;
+    padding: 2rem;
 }
-
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #4caf50;
-    color: white;
+.form-label {
+    font-weight: 500;
+}
+.btn-success {
+    background: linear-gradient(90deg, #43a047, #66bb6a);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
 }
 
-.result {
-    margin-top: 20px;
-    font-weight: bold;
+.btn-success:hover {
+    transform: scale(1.05);
+}
+footer {
+    background-color: #2e7d32;
+    color: #fff;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
 }
